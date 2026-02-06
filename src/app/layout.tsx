@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logos/bmc-blk-logo.svg",
+        url: "/logos/boring-media-co-blk-letters.png",
         width: 1200,
         height: 630,
         alt: Strings.Meta.title,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: Strings.Meta.title,
     description: Strings.Meta.description,
-    images: ["/logos/bmc-blk-logo.svg"],
+    images: ["/logos/boring-media-co-blk-letters.png"],
   },
   robots: {
     index: true,
@@ -47,8 +47,13 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/logos/boring-b-icon.svg",
-    apple: "/logos/boring-b-icon.svg",
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logos/boring-b-icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 

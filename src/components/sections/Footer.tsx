@@ -38,12 +38,20 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-4">
               {Strings.Footer.contact.title}
             </h4>
-            <a
-              href={`mailto:${Strings.Footer.contact.email}`}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              {Strings.Footer.contact.email}
-            </a>
+            <div className="space-y-2">
+              <a
+                href={`mailto:${Strings.Footer.contact.email}`}
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                {Strings.Footer.contact.email}
+              </a>
+              <a
+                href={`tel:${Strings.Footer.contact.phone.replace(/[^0-9]/g, '')}`}
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                {Strings.Footer.contact.phone}
+              </a>
+            </div>
           </div>
 
           {/* Social */}

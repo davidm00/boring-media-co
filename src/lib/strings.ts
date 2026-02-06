@@ -91,7 +91,8 @@ export const Strings = {
     copyright: `© ${new Date().getFullYear()} Boring Media Co. All rights reserved.`,
     contact: {
       title: 'Contact',
-      email: 'hello@boringmedia.co',
+      email: 'info@boringmedia.co',
+      phone: '(985) 238-5215',
     },
     services: {
       title: 'Services',

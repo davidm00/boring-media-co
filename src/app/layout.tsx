@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logos/boring-logo-white-subtitle.svg",
+        url: "/logos/bmc-blk-logo.svg",
         width: 1200,
         height: 630,
         alt: Strings.Meta.title,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: Strings.Meta.title,
     description: Strings.Meta.description,
-    images: ["/logos/boring-logo-white-subtitle.svg"],
+    images: ["/logos/bmc-blk-logo.svg"],
   },
   robots: {
     index: true,

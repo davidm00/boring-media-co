@@ -6,7 +6,7 @@
 export const Strings = {
   Meta: {
     title: 'Boring Media Co. | Marketing Without Surprises or Drama',
-    description: 'A marketing agency delivering predictable results through social media, photo & video, paid advertising, and web development. Consistent growth, no vanity metrics.',
+    description: 'A marketing agency delivering predictable results through social media, photo & video, paid advertising, and web development. Just consistent growth.',
     keywords: ['marketing agency', 'social media', 'paid advertising', 'web development'],
   },
 

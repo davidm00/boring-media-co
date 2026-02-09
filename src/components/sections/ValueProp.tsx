@@ -18,10 +18,10 @@ export default function ValueProp() {
             <h2 className={`${styles.sectionTitle} mb-6`}>
               {Strings.ValueProp.title}
             </h2>
-            <p className="text-xl text-gray-700 mb-4">
+            <p className={`${styles.bodyLg} ${styles.textSecondary} mb-4`}>
               {Strings.ValueProp.subtitle}
             </p>
-            <p className={`${styles.bodyMuted} text-lg`}>
+            <p className={`${styles.body} ${styles.textMuted} ${styles.prose}`}>
               {Strings.ValueProp.description}
             </p>
           </motion.div>
@@ -35,8 +35,8 @@ export default function ValueProp() {
                 viewport={viewport.loose}
                 className="border-l-4 border-boring-blue pl-6"
               >
-                <h3 className="text-2xl font-bold mb-2">{point.title}</h3>
-                <p className={styles.bodyMuted}>{point.description}</p>
+                <h3 className={`${styles.sectionSubtitle} font-semibold mb-2`}>{point.title}</h3>
+                <p className={styles.textSecondary}>{point.description}</p>
               </motion.div>
             ))}
           </div>

@@ -20,7 +20,7 @@ export default function CTA() {
         <motion.p
           {...ctaAnimations.subheadline}
           viewport={viewport.default}
-          className={`${styles.bodyDark} text-xl mb-12`}
+          className={`${styles.bodyLg} ${styles.textLight} mb-12`}
         >
           {Strings.CTA.subheadline}
         </motion.p>

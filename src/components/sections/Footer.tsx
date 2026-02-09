@@ -17,7 +17,7 @@ export default function Footer() {
 
           {/* Services */}
           <nav aria-label="Services">
-            <h4 className={styles.footerTitle}>
+            <h4 className={`${styles.footerTitle} mb-4`}>
               {Strings.Footer.services.title}
             </h4>
             <ul className="space-y-2">
@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className={styles.footerTitle}>
+            <h4 className={`${styles.footerTitle} mb-4`}>
               {Strings.Footer.contact.title}
             </h4>
             <div className="space-y-2">
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Social */}
           <nav aria-label="Social Media">
-            <h4 className={styles.footerTitle}>
+            <h4 className={`${styles.footerTitle} mb-4`}>
               {Strings.Footer.social.title}
             </h4>
             <ul className="space-y-2">

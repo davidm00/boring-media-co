@@ -16,19 +16,28 @@ export const styles = {
   sectionHeader: 'text-center mb-12 sm:mb-16',
 
   // ─────────────────────────────────────────────
-  // Typography
+  // Typography (disciplined scale)
   // ─────────────────────────────────────────────
   sectionTitle: theme.typography.h2,
-  sectionTitleDark: `${theme.typography.h2} text-gray-900`,
-  sectionSubtitle: 'text-xl text-gray-600',
+  sectionTitleDark: `${theme.typography.h2} ${theme.colors.text.primary}`,
+  sectionSubtitle: `${theme.typography.body} ${theme.colors.text.secondary}`,
 
   heroTitle: theme.typography.h1,
-  heroSubtitle: `${theme.typography.bodyXl} text-gray-400`,
+  heroSubtitle: `${theme.typography.bodyLg} ${theme.colors.text.muted}`,
+
+  cardTitle: theme.typography.h4,
+  cardDescription: `${theme.typography.body} ${theme.colors.text.secondary}`,
 
   bodyLg: theme.typography.bodyLg,
-  bodyMuted: 'text-gray-600',
-  bodyLight: 'text-gray-500',
-  bodyDark: 'text-gray-300',
+  body: theme.typography.body,
+  small: theme.typography.small,
+  prose: theme.typography.prose,
+
+  // Consistent grays for light/dark contexts
+  textPrimary: theme.colors.text.primary,
+  textSecondary: theme.colors.text.secondary,
+  textMuted: theme.colors.text.muted,
+  textLight: 'text-gray-300', // for dark backgrounds
 
   // ─────────────────────────────────────────────
   // Buttons
@@ -67,7 +76,7 @@ export const styles = {
   // ─────────────────────────────────────────────
   // Footer
   // ─────────────────────────────────────────────
-  footerTitle: 'font-bold text-lg mb-4',
+  footerTitle: theme.typography.h4,
   footerLink: 'text-gray-400 hover:text-white transition-colors',
 
   // ─────────────────────────────────────────────

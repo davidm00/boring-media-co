@@ -27,6 +27,9 @@
 @theme inline {
   --color-boring-blue: #345bd1;
   --color-boring-gray: #d7d8db;
+  --color-text-primary: #171717;
+  --color-text-secondary: #525252;
+  --color-text-muted: #737373;
   --font-sans: 'CanvaSans', system-ui, sans-serif;
 }
 
@@ -36,10 +39,16 @@ html {
 
 body {
   background: #ffffff;
-  color: #171717;
+  color: var(--color-text-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Consistent prose width for body copy */
+.prose-width {
+  max-width: 65ch;
 }
 
 /* Hide scrollbar for horizontal scroll galleries */

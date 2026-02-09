@@ -25,10 +25,10 @@ export default function Services() {
           <h2 className={`${styles.sectionTitle} mb-6`}>
             {Strings.Services.title}
           </h2>
-          <p className={`${styles.bodyLg} ${styles.bodyMuted} leading-relaxed mb-4`}>
+          <p className={`${styles.bodyLg} ${styles.textSecondary} leading-relaxed mb-4`}>
             {Strings.Services.subtitle}
           </p>
-          <p className={`${styles.bodyLight} leading-relaxed`}>
+          <p className={`${styles.body} ${styles.textMuted} leading-relaxed`}>
             {Strings.Services.intro}
           </p>
         </motion.div>
@@ -55,10 +55,10 @@ export default function Services() {
                     />
                   </div>
                 </div>
-                <h3 className={`text-xl sm:text-2xl font-bold mb-3 text-gray-900 group-hover:text-boring-blue ${styles.transitionColors}`}>
+                <h3 className={`text-xl md:text-2xl font-semibold leading-[1.2] mb-3 ${styles.textPrimary} group-hover:text-boring-blue ${styles.transitionColors}`}>
                   {service.title}
                 </h3>
-                <p className={`${styles.bodyMuted} leading-relaxed`}>
+                <p className={`${styles.body} ${styles.textSecondary} leading-relaxed`}>
                   {service.description}
                 </p>
               </motion.div>
@@ -85,10 +85,10 @@ export default function Services() {
                     />
                   </div>
                 </div>
-                <h3 className={`text-xl sm:text-2xl font-bold mb-3 text-gray-900 group-hover:text-boring-blue ${styles.transitionColors}`}>
+                <h3 className={`text-xl md:text-2xl font-semibold leading-[1.2] mb-3 ${styles.textPrimary} group-hover:text-boring-blue ${styles.transitionColors}`}>
                   {service.title}
                 </h3>
-                <p className={`${styles.bodyMuted} leading-relaxed`}>
+                <p className={`${styles.body} ${styles.textSecondary} leading-relaxed`}>
                   {service.description}
                 </p>
               </motion.div>
@@ -102,7 +102,7 @@ export default function Services() {
           viewport={viewport.none}
           className="text-center pt-8 border-t border-gray-200"
         >
-          <p className={`${styles.bodyLg} text-gray-700 mb-6`}>
+          <p className={`${styles.bodyLg} ${styles.textSecondary} mb-6`}>
             {Strings.Services.bottomCta}
           </p>
           <button

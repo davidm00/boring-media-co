@@ -19,9 +19,9 @@ export const Strings = {
   // SEO & Meta Tags (layout.tsx <head>)
   // ─────────────────────────────────────────────
   Meta: {
-    title: 'Boring Media Co. | Marketing Without Surprises or Drama',
-    description: 'A marketing agency delivering predictable results through social media, photo & video, paid advertising, and web development. Just consistent growth.',
-    keywords: ['marketing agency', 'social media', 'paid advertising', 'web development'],
+    title: 'Boring Media Co. | Marketing Without Surprises',
+    description: 'Predictable marketing for small businesses—photo, video, social, paid ads, and websites. Clear scope. Clear pricing. On-time delivery.',
+    keywords: ['marketing agency', 'social media', 'paid advertising', 'web development', 'content creation', 'web design'],
     ogImage: '/logos/boring-media-co-blk-letters.png',
   },
 
@@ -79,7 +79,7 @@ export const Strings = {
   // ─────────────────────────────────────────────
   Hero: {
     headline: 'Marketing Without Surprises',
-    subheadline: 'Predictable results. Consistent growth. Refreshingly boring.',
+    subheadline: 'Clear scope. Clear timelines. Consistent growth.',
     ctaButton: "Let's Talk",
   },
 
@@ -89,8 +89,8 @@ export const Strings = {
   ValueProp: {
     title: 'Why Boring?',
     subtitle: 'Because marketing shouldn\'t be a rollercoaster.',
-    description: 'We believe in strategy over surprises. Our approach delivers consistent, measurable results without the drama. No vanity metrics. No flashy promises. Just steady growth that compounds over time.',
-    transitionCta: 'See what that means in practice',
+    description: 'We plan the work, do the work, and ship on time. You\'ll always know what\'s happening, what it costs, and what comes next.',
+    transitionCta: 'See the work',
     points: [
       {
         title: 'Predictable',
@@ -102,7 +102,7 @@ export const Strings = {
       },
       {
         title: 'Effective',
-        description: 'Results that matter to your bottom line, not just your ego.',
+        description: 'Results that matter to your business—not just pretty dashboards.',
       },
     ],
   },
@@ -112,9 +112,9 @@ export const Strings = {
   // ─────────────────────────────────────────────
   Services: {
     title: 'What We Do',
-    subtitle: 'Full-service creative, web, and digital marketing—built to work together, scale with you, and actually move the needle.',
-    intro: 'Instead of juggling multiple vendors, we provide a cohesive, end-to-end solution for your brand\'s online presence. Everything is structured with clear deliverables and a focus on real-world performance, not fluff.',
-    bottomCta: 'Most clients combine 2–3 services for maximum impact. Let\'s figure out what works best for you.',
+    subtitle: 'Full-service creative, web, and digital marketing—built to work together, scale with you, and help your business grow.',
+    intro: 'Clear deliverables. Clear timelines. No fluff.',
+    bottomCta: 'Most clients combine 2–3 services. We\'ll recommend the simplest mix that makes sense.',
     ctaButton: 'Let\'s Talk',
     items: {
       photography: {
@@ -129,7 +129,7 @@ export const Strings = {
       },
       webDevelopment: {
         title: 'Web Development',
-        description: 'Fast, modern, mobile-responsive websites using custom-coded technology. From simple starter sites to fully custom platforms with whatever you need.',
+        description: 'Fast, modern, mobile-responsive websites using custom-coded technology. From simple sites to custom builds—booking, e-commerce, integrations.',
         icon: '/logos/icon-web-dev.svg',
       },
       socialMedia: {
@@ -169,22 +169,22 @@ export const Strings = {
   // ─────────────────────────────────────────────
   SocialProof: {
     title: 'What Our Clients Say',
-    subtitle: 'Results over promises. Every time.',
+    subtitle: 'Clear process. Consistent delivery.',
     testimonials: [
       {
-        quote: 'Boring Media delivered exactly what they promised—no surprises, just results. Our engagement is up 300% and we finally have a consistent brand presence.',
+        quote: 'They delivered on time, stayed within scope, and the content looks great. The process was simple.',
         author: 'Sarah Mitchell',
         role: 'Marketing Director',
         company: 'CORE Lending',
       },
       {
-        quote: 'Finally, an agency that shows up when they say they will. They took our vision and executed it flawlessly. The work speaks for itself.',
+        quote: 'Clear pricing, clear deliverables, and no chasing. We knew exactly what we were getting.',
         author: 'James Chen',
         role: 'General Manager',
         company: 'Galleria BMW',
       },
       {
-        quote: 'We\'ve worked with flashy agencies before. Boring Media is different—they focus on what actually moves the needle. Best decision we made.',
+        quote: 'They show up, do the work, and deliver on schedule. That\'s all we needed.',
         author: 'Amanda Torres',
         role: 'Founder',
         company: 'Providence Powerhouse',
@@ -197,7 +197,7 @@ export const Strings = {
   // ─────────────────────────────────────────────
   CTA: {
     headline: 'Ready for marketing without surprises?',
-    subheadline: 'Let\'s build something that actually works.',
+    subheadline: 'Let\'s build a system you can rely on.',
     button: 'Get Started',
   },
 
@@ -205,7 +205,7 @@ export const Strings = {
   // Footer (site footer with contact & social)
   // ─────────────────────────────────────────────
   Footer: {
-    tagline: 'Marketing Without Surprises',
+    tagline: 'Steady growth. Zero drama.',
     copyright: `© ${new Date().getFullYear()} Boring Media Co. All rights reserved.`,
     contact: {
       title: 'Contact',

@@ -5,7 +5,7 @@
 
 export const theme = {
   // ─────────────────────────────────────────────
-  // Colors
+  // Colors (use CSS variables for consistency)
   // ─────────────────────────────────────────────
   colors: {
     brand: {
@@ -13,16 +13,15 @@ export const theme = {
       gray: '#d7d8db',
     },
     text: {
-      primary: '#171717',
-      muted: '#6b7280',    // gray-500
-      light: '#9ca3af',    // gray-400
-      dark: '#111827',     // gray-900
+      primary: '#171717',      // --color-text-primary
+      secondary: '#525252',    // --color-text-secondary (gray-600)
+      muted: '#737373',        // --color-text-muted (gray-500)
     },
     bg: {
       white: '#ffffff',
       black: '#000000',
       gray: '#d7d8db',
-      darkGray: '#111827', // gray-900
+      darkGray: '#111827',     // gray-900
     },
   },
 
@@ -59,20 +58,23 @@ export const theme = {
   },
 
   // ─────────────────────────────────────────────
-  // Typography (Tailwind class fragments)
+  // Typography Scale (disciplined, consistent)
+  // Use these exact classes for hierarchy
   // ─────────────────────────────────────────────
   typography: {
-    // Headings
-    h1: 'text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight',
-    h2: 'text-3xl sm:text-4xl md:text-5xl font-bold',
-    h3: 'text-xl sm:text-2xl font-bold',
-    h4: 'font-bold text-lg',
+    // Headings - tight tracking, consistent line-height
+    h1: 'text-5xl md:text-6xl font-bold tracking-tight leading-[1.05]',
+    h2: 'text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]',
+    h3: 'text-xl md:text-2xl font-semibold leading-[1.2]',
+    h4: 'text-lg font-bold leading-[1.3]',
 
-    // Body
-    bodyXl: 'text-lg sm:text-xl md:text-2xl',
-    bodyLg: 'text-lg sm:text-xl',
-    body: 'text-lg',
-    bodySm: 'text-base sm:text-lg',
+    // Body - comfortable reading
+    body: 'text-base md:text-lg leading-[1.6]',
+    bodyLg: 'text-lg md:text-xl leading-[1.6]',
+    small: 'text-sm leading-[1.5]',
+
+    // Prose width for long-form content
+    prose: 'max-w-[65ch]',
   },
 
   // ─────────────────────────────────────────────

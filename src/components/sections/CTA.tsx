@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Button from "@/components/ui/Button";
 import { Strings } from "@/lib/strings";
 
 export default function CTA() {
@@ -34,7 +33,14 @@ export default function CTA() {
           transition={{ duration: 0.6, delay: 0.24, ease: "easeOut" }}
           viewport={{ once: true, margin: "-80px" }}
         >
-          <Button variant="primary">{Strings.CTA.button}</Button>
+          <button
+            data-tally-open={Strings.Links.tallyFormId}
+            data-tally-emoji-text="👋"
+            data-tally-emoji-animation="wave"
+            className="px-8 py-4 bg-white text-black rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
+          >
+            {Strings.CTA.button}
+          </button>
         </motion.div>
       </div>
     </section>

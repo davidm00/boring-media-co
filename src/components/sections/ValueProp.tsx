@@ -5,7 +5,7 @@ import { Strings } from "@/lib/strings";
 
 export default function ValueProp() {
   return (
-    <section id="about" aria-label="Why Boring" className="py-16 sm:py-24 px-4 sm:px-6 bg-boring-gray">
+    <section id="about" aria-label="Why Boring" className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Main Message */}
@@ -43,6 +43,35 @@ export default function ValueProp() {
             ))}
           </div>
         </div>
+
+        {/* Transition to Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-16 sm:mt-20 text-center"
+        >
+          <a
+            href="#services"
+            className="inline-flex items-center gap-2 text-boring-blue text-lg font-medium hover:gap-3 transition-all duration-300"
+          >
+            {Strings.ValueProp.transitionCta}
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

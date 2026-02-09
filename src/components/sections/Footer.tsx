@@ -62,7 +62,9 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href={Strings.Links.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   {Strings.Footer.social.instagram}
@@ -70,18 +72,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href={Strings.Links.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  {Strings.Footer.social.linkedin}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  {Strings.Footer.social.twitter}
+                  {Strings.Footer.social.facebook}
                 </a>
               </li>
             </ul>

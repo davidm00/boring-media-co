@@ -12,8 +12,8 @@ interface LogoProps {
 export default function Logo({ variant, width = 150, height = 50, className, priority = false }: LogoProps) {
   const src =
     variant === "black"
-      ? "/logos/bmc-blk-logo.svg"
-      : "/logos/boring-logo-white-subtitle.svg";
+      ? Strings.Assets.logos.black
+      : Strings.Assets.logos.white;
 
   return (
     <Image

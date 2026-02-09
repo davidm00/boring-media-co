@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Logo from "@/components/ui/Logo";
-import Button from "@/components/ui/Button";
 import { Strings } from "@/lib/strings";
 
 export default function Hero() {
@@ -64,7 +63,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
         >
-          <Button variant="primary">{Strings.Hero.ctaButton}</Button>
+          <button
+            data-tally-open={Strings.Links.tallyFormId}
+            data-tally-emoji-text="👋"
+            data-tally-emoji-animation="wave"
+            className="px-8 py-4 bg-boring-blue text-white rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
+          >
+            {Strings.Hero.ctaButton}
+          </button>
         </motion.div>
       </div>
     </section>

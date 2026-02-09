@@ -50,3 +50,13 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Hero radial glow effect */
+.hero-glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(52, 91, 209, 0.15) 0%,
+    rgba(52, 91, 209, 0.05) 40%,
+    transparent 70%
+  );
+}

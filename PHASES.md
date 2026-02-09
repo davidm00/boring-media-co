@@ -136,6 +136,47 @@ This document tracks the development progress of the Boring Media Co. marketing 
 
 ---
 
+---
+
+## Phase 6: Styling Architecture Refactor
+**Status:** ⬚ Not Started
+
+### Overview
+Centralize design tokens, class recipes, and motion presets to improve consistency and maintainability. See `style-refactor.md` for full plan.
+
+### Tasks
+- [ ] Create `src/lib/theme.ts` with design tokens (colors, spacing, radius, shadow, typography, motion)
+- [ ] Create `src/lib/styles.ts` with semantic class recipes
+- [ ] Create `src/lib/motion.ts` with Framer Motion presets
+- [ ] Add `.hero-glow` utility class in `globals.css`
+- [ ] Refactor Hero.tsx (button, heading, glow, motion presets)
+- [ ] Refactor ValueProp.tsx (section padding, typography, motion presets)
+- [ ] Refactor Services.tsx (container, cards, icons, button, motion presets)
+- [ ] Refactor Work.tsx (heading, arrow buttons, pagination dots, motion presets)
+- [ ] Refactor SocialProof.tsx (heading, cards, motion presets)
+- [ ] Refactor CTA.tsx (heading, button, motion presets)
+- [ ] Refactor Footer.tsx (optional: footer title styles)
+- [ ] Refactor AccentDivider in page.tsx (optional: accentDivider recipe)
+
+### Mandatory Tests
+- [ ] All 17+ existing tests still pass
+- [ ] Production build succeeds (`npm run build`)
+- [ ] Visual parity: no layout shifts across sections
+- [ ] Motion parity: animations feel identical
+- [ ] Button consistency: primary/secondary look identical everywhere
+- [ ] Typography consistency: headings/body sizes match across sections
+- [ ] Dark sections: text contrast correct on black backgrounds
+- [ ] Hero glow: radial glow looks identical after CSS move
+- [ ] Responsive: mobile breakpoints unchanged
+
+### Completion Criteria
+- All tasks checked ✅
+- All tests pass ✅
+- Visual QA checklist complete ✅
+- No console errors ✅
+
+---
+
 ## Test Commands
 
 ```bash

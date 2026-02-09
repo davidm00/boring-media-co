@@ -1,5 +1,6 @@
 import Logo from "@/components/ui/Logo";
 import { Strings } from "@/lib/strings";
+import { styles } from "@/lib/styles";
 
 export default function Footer() {
   const serviceItems = Object.values(Strings.Services.items);
@@ -16,16 +17,13 @@ export default function Footer() {
 
           {/* Services */}
           <nav aria-label="Services">
-            <h4 className="font-bold text-lg mb-4">
+            <h4 className={styles.footerTitle}>
               {Strings.Footer.services.title}
             </h4>
             <ul className="space-y-2">
               {serviceItems.map((service) => (
                 <li key={service.title}>
-                  <a
-                    href="#services"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                  <a href="#services" className={styles.footerLink}>
                     {service.title}
                   </a>
                 </li>
@@ -35,19 +33,19 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-lg mb-4">
+            <h4 className={styles.footerTitle}>
               {Strings.Footer.contact.title}
             </h4>
             <div className="space-y-2">
               <a
                 href={`mailto:${Strings.Footer.contact.email}`}
-                className="block text-gray-400 hover:text-white transition-colors"
+                className={`block ${styles.footerLink}`}
               >
                 {Strings.Footer.contact.email}
               </a>
               <a
                 href={`tel:${Strings.Footer.contact.phone.replace(/[^0-9]/g, '')}`}
-                className="block text-gray-400 hover:text-white transition-colors"
+                className={`block ${styles.footerLink}`}
               >
                 {Strings.Footer.contact.phone}
               </a>
@@ -56,7 +54,7 @@ export default function Footer() {
 
           {/* Social */}
           <nav aria-label="Social Media">
-            <h4 className="font-bold text-lg mb-4">
+            <h4 className={styles.footerTitle}>
               {Strings.Footer.social.title}
             </h4>
             <ul className="space-y-2">
@@ -65,7 +63,7 @@ export default function Footer() {
                   href={Strings.Links.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className={styles.footerLink}
                 >
                   {Strings.Footer.social.instagram}
                 </a>
@@ -75,7 +73,7 @@ export default function Footer() {
                   href={Strings.Links.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className={styles.footerLink}
                 >
                   {Strings.Footer.social.facebook}
                 </a>

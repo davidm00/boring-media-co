@@ -3,28 +3,22 @@
 import { motion } from "framer-motion";
 import Logo from "@/components/ui/Logo";
 import { Strings } from "@/lib/strings";
+import { styles } from "@/lib/styles";
+import { heroGlow, heroLogo, scaleLine, heroAnimations } from "@/lib/motion";
 
 export default function Hero() {
   return (
     <section aria-label="Hero" className="min-h-screen bg-black text-white flex items-center justify-center px-4 sm:px-6 py-16 overflow-hidden relative">
       {/* Subtle radial glow behind logo */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.3 }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[600px] h-[400px] rounded-full pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, rgba(52,91,209,0.15) 0%, rgba(52,91,209,0.05) 40%, transparent 70%)",
-        }}
+        {...heroGlow}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[600px] h-[400px] rounded-full pointer-events-none hero-glow"
       />
 
       <div className="max-w-5xl mx-auto text-center relative z-10">
         {/* Large hero logo — the centerpiece */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          {...heroLogo}
           className="mb-6 flex justify-center"
         >
           <div className="overflow-hidden h-[140px] sm:h-[180px] md:h-[240px] w-full max-w-[320px] sm:max-w-[460px] md:max-w-[620px] flex items-center justify-center">
@@ -34,40 +28,30 @@ export default function Hero() {
 
         {/* Thin accent line */}
         <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mx-auto mb-10 h-px w-48 bg-gradient-to-r from-transparent via-boring-blue to-transparent"
+          {...scaleLine}
+          className={`mx-auto mb-10 ${styles.accentLine}`}
         />
 
         <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+          {...heroAnimations.headline}
+          className={`${styles.heroTitle} mb-6`}
         >
           {Strings.Hero.headline}
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
-          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-10 sm:mb-14 max-w-2xl mx-auto"
+          {...heroAnimations.subheadline}
+          className={`${styles.heroSubtitle} mb-10 sm:mb-14 max-w-2xl mx-auto`}
         >
           {Strings.Hero.subheadline}
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
-        >
+        <motion.div {...heroAnimations.cta}>
           <button
             data-tally-open={Strings.Links.tallyFormId}
             data-tally-emoji-text="👋"
             data-tally-emoji-animation="wave"
-            className="px-8 py-4 bg-boring-blue text-white rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
+            className={styles.primaryButton}
           >
             {Strings.Hero.ctaButton}
           </button>

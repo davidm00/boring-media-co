@@ -39,10 +39,11 @@ describe("Strings", () => {
 
     it("has items with correct structure", () => {
       const items = Strings.Services.items;
-      expect(items.socialMedia).toBeDefined();
-      expect(items.photoVideo).toBeDefined();
-      expect(items.paidAdvertising).toBeDefined();
+      expect(items.photography).toBeDefined();
+      expect(items.videography).toBeDefined();
       expect(items.webDevelopment).toBeDefined();
+      expect(items.socialMedia).toBeDefined();
+      expect(items.hosting).toBeDefined();
 
       // Check each item has required fields
       Object.values(items).forEach((item) => {

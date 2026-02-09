@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Strings } from "@/lib/strings";
+import { styles } from "@/lib/styles";
+import { fadeUp, fadeUpStagger, viewport } from "@/lib/motion";
 
 const testimonials = Strings.SocialProof.testimonials;
 
@@ -9,21 +11,19 @@ export default function SocialProof() {
   return (
     <section
       aria-label="Client Testimonials"
-      className="py-16 sm:py-24 bg-boring-gray"
+      className={`${styles.section} bg-boring-gray`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className={styles.sectionContainer}>
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
+          {...fadeUp}
+          viewport={viewport.none}
+          className={styles.sectionHeader}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className={`${styles.sectionTitle} mb-4`}>
             {Strings.SocialProof.title}
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className={styles.sectionSubtitle}>
             {Strings.SocialProof.subtitle}
           </p>
         </motion.div>
@@ -33,15 +33,9 @@ export default function SocialProof() {
           {testimonials.map((testimonial, index) => (
             <motion.blockquote
               key={testimonial.author}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.15,
-                ease: "easeOut",
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
+              {...fadeUpStagger(index)}
+              viewport={viewport.tight}
+              className={`${styles.card} ${styles.cardHoverSoft}`}
             >
               {/* Quote Mark */}
               <svg

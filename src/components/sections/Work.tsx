@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { Strings } from "@/lib/strings";
+import { styles } from "@/lib/styles";
+import { fadeUp, scaleInStagger, viewport } from "@/lib/motion";
 
 const projects = Strings.Work.projects;
 
@@ -75,20 +77,18 @@ export default function Work() {
   };
 
   return (
-    <section id="work" aria-label="Our Work" className="py-16 sm:py-24 bg-white overflow-hidden">
+    <section id="work" aria-label="Our Work" className={`${styles.section} bg-white overflow-hidden`}>
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-12">
+      <div className={`${styles.sectionContainer} mb-12`}>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
+          {...fadeUp}
+          viewport={viewport.none}
           className="text-center"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+          <h2 className={`${styles.sectionTitleDark} mb-4`}>
             {Strings.Work.title}
           </h2>
-          <p className="text-xl text-gray-600">{Strings.Work.subtitle}</p>
+          <p className={styles.sectionSubtitle}>{Strings.Work.subtitle}</p>
         </motion.div>
       </div>
 
@@ -98,7 +98,7 @@ export default function Work() {
         <button
           onClick={scrollPrev}
           aria-label={Strings.Work.prevAriaLabel}
-          className={`absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center transition-all duration-300 ${
+          className={`absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-10 ${styles.galleryArrow} ${
             activeIndex === 0 ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
@@ -111,7 +111,7 @@ export default function Work() {
         <button
           onClick={scrollNext}
           aria-label={Strings.Work.nextAriaLabel}
-          className={`absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center transition-all duration-300 ${
+          className={`absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-10 ${styles.galleryArrow} ${
             activeIndex === projects.length - 1 ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
@@ -130,10 +130,8 @@ export default function Work() {
               key={project.id}
               data-card
               onClick={() => scrollToIndex(index)}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-10%" }}
+              {...scaleInStagger(index)}
+              viewport={viewport.gallery}
               className="snap-center shrink-0 w-[75vw] sm:w-[60vw] md:w-[50vw] lg:w-[40vw] relative rounded-2xl overflow-hidden group cursor-pointer"
             >
               <Image
@@ -157,10 +155,10 @@ export default function Work() {
             key={index}
             onClick={() => scrollToIndex(index)}
             aria-label={`${Strings.Work.dotAriaLabel} ${index + 1}`}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+            className={`${styles.paginationDot} ${
               activeIndex === index
-                ? "bg-boring-blue w-8"
-                : "bg-gray-300 hover:bg-gray-400"
+                ? styles.paginationDotActive
+                : styles.paginationDotInactive
             }`}
           />
         ))}
